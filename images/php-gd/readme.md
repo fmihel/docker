@@ -8,9 +8,3 @@ build
 ```bash
 $ docker build -t php-gd .
 ```
-
-run
-```bash
-docker 
-```
-

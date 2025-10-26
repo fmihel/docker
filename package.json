@@ -1,0 +1,16 @@
+{
+  "name": "docker",
+  "version": "0.0.1",
+  "description": "docker builder ",
+  "main": "index.js",
+  "scripts": {
+    "docker up": "docker compose up",
+    "docker down": "docker compose down",
+    "--------------------------------------------------  ": ""
+  },
+  "author": "fmihel <fmihel76@gmail.com>",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
