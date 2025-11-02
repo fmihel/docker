@@ -18,14 +18,7 @@ RUN apt-get update \
     && php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
     && php -r "unlink('composer-setup.php');" \
-    && mv composer.phar /usr/local/bin/composer
-RUN apt-get -y install libmagickwand-dev \
-    && pecl install imagick \
-    && docker-php-ext-enable imagick
-# RUN apt-get update -y && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev
-# RUN set -eux; docker-php-ext-configure gd --with-freetype --with-jpeg; \
-    # docker-php-ext-install exif gd
-RUN apt-get update && \
-    apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev && \
-    docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ && \
-    docker-php-ext-install gd
+    && mv composer.phar /usr/local/bin/composer\
+    && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libpng-dev \
+    && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
+    && docker-php-ext-install gd
