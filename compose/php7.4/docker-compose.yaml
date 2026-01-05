@@ -1,0 +1,16 @@
+version: '3.7'
+networks:
+  docker_network:
+services:
+  PHP-SRV:
+    image: php7.4
+    container_name: php7.4
+    volumes:
+      - .:/var/www/html
+      - ./../../configs/99-xdebug.ini:/usr/local/etc/php/conf.d/99-xdebug.ini
+      #- ~/work/docker/ex3/config/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - docker_network 
+    ports: 
+      - '8080:80'
+  

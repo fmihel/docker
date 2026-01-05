@@ -5,6 +5,7 @@
 - [PHP 7.4, imagick, xdebug](./images/php-imagick/readme.md)
 
 ## compose
+- [php7.4](./compose/php7.4/readme.md)
 - [php-gd](./compose/php-gd/readme.md)
 - [php-imagick](./compose/php-imagick/readme.md)
 
