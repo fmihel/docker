@@ -3,12 +3,12 @@ networks:
   docker_network:
 services:
   PHP-SRV:
-    image: php-apache-2
-    container_name: php-apache-2
+    image: php7.4
+    container_name: php7.4
     volumes:
-      - /home/mike/work/windeco/windeco3:/var/www/html
-      - /home/mike/work/windeco/windeco3/docker/config/apache2.conf:/etc/apache2/apache2.conf
-      - /home/mike/work/windeco/windeco3/docker/config/99-xdebug.ini:/usr/local/etc/php/conf.d/99-xdebug.ini
+      - .:/var/www/html
+      - ./../../configs/99-xdebug.ini:/usr/local/etc/php/conf.d/99-xdebug.ini
+      - ./../../configs/apache2.conf:/etc/apache2/apache2.conf
       #- ~/work/docker/ex3/config/php.ini:/usr/local/etc/php/php.ini
     networks:
       - docker_network 
@@ -17,7 +17,7 @@ services:
   MYSQL:
     image: mysql:5.7-debian
     volumes:
-      - /home/mike/work/windeco/windeco3/mysql:/var/lib/mysql
+      - ./mysql:/var/lib/mysql
     networks:
       - docker_network 
     environment:
