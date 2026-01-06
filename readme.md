@@ -8,6 +8,7 @@
 - [php7.4](./compose/php7.4/readme.md)
 - [php-gd](./compose/php-gd/readme.md)
 - [php-imagick](./compose/php-imagick/readme.md)
+- [PHP 7.4, mysql 5, phpmyadmin, xdebug](./compose/php7-mysql5/readme.md)
 
 
 
